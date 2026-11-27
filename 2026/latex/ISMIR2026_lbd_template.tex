@@ -17,7 +17,8 @@
 \usepackage{amsmath,cite,url}
 \usepackage{graphicx}
 \usepackage{color}
-\def\lbd{}	% Flag to use correct LBD settings in the paper, please do not modify this line
+\usepackage{booktabs}
+\def\lbd{}  % Flag to use correct LBD settings in the paper, please do not modify this line
 
 
 % Title. Please use IEEE-compliant title case when specifying the title here,
@@ -175,25 +176,29 @@ References to tables and figures should be capitalized, for example:
 see \figref{fig:example} and \tabref{tab:example}.
 Figures and tables may extend across both columns to a maximum width of 17.2cm.
 
-\begin{table}
- \begin{center}
- \begin{tabular}{|l|l|}
-  \hline
-  String value & Numeric value \\
-  \hline
-  Hello ISMIR  & \conferenceyear \\
-  \hline
- \end{tabular}
-\end{center}
- \caption{Table captions should be placed below the table.}
- \label{tab:example}
+\begin{table}[t]
+    \centering
+    \begin{tabular}{lc}
+        \toprule
+        \textbf{Name} & \textbf{Period}\\
+        \midrule
+        Medieval & ca. 500-1400\\
+        Renaissance & ca. 1400-1600\\
+        Baroque &  ca. 1600-1750\\
+        Classical &  ca. 1730-1820\\
+        Romantic &  ca. 1800-1910\\
+        Modernism & from ca. 1890\\
+        Contemporary & from ca. 1945\\
+        \bottomrule
+    \end{tabular}
+    \caption{Major eras of Western classical music.}\label{tab:example}
 \end{table}
 
 \begin{figure}
- \centerline{\framebox{
- \includegraphics[width=0.8\columnwidth]{example.png}}}
- \caption{Figure captions should be placed below the figure.}
- \label{fig:example}
+  \centering
+  \includegraphics[alt={ISMIR 2026 template example image},width=0.9\linewidth]{example.png}
+  \caption{Figure captions should be placed below the figure.}
+  \label{fig:example}
 \end{figure}
 
 \section{Equations}
@@ -207,12 +212,7 @@ E=mc^{2}
 
 \section{Citations}
 
-All bibliographical references should be listed at the end of the submission, in a section named ``REFERENCES,''
-numbered and in the order that they first appear in the text. Formatting in the REFERENCES section must conform to the
-IEEE standard (\url{https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf}). Approved
-IEEE abbreviations (Proceedings $\rightarrow$ Proc.) may be used to shorten reference listings. All references listed
-should be cited in the text. When referring to documents, place the numbers in square brackets (e.g., \cite{ISMIR17Author:01}
-for a single reference, or \cite{JNMR10Someone:01,Book20Person:01,Chapter09Person:01} for a range).
+All bibliographical references should be listed at the end of the submission, in a section named ``REFERENCES,'' numbered and in the order that they first appear in the text. Formatting in the REFERENCES section must conform to the IEEE standard (\url{https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf}). Approved IEEE abbreviations (Proceedings $\rightarrow$ Proc.) may be used to shorten reference listings. All references listed should be cited in the text. When referring to documents, place the numbers in square brackets (e.g., \cite{Mueller21_FMP_SPRINGER} for a single reference, or \cite{KneesS16_MusicSimilarityRetrieval_SPRINGER,WeihsJVR16_MusicDataAnalysis_CRC,Lerch23_AudioContentAnalysis_WILEY,SerraEtAl13_RoadmapMIR_CreativeCommon} for a range).
 
 
 \section{AI Usage Statement}
@@ -247,4 +247,3 @@ In line with the ISMIR 2026 AI Usage Policy, if you need to declare and explain 
 %\end{thebibliography}
 
 \end{document}
-
